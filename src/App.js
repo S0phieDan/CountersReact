@@ -1,25 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './bootstrap.min.css';
+import Counters from './counterComponents/counters'
+
+const dataCounters = [
+    {
+        startVal: 0,
+        interval: 5,
+        maxVal: 10,
+        minVal: -1
+    }, 
+    
+    {
+        startVal: 20,
+        interval:3,
+        maxVal:70,
+        minVal: 0
+    },
+
+    {
+        startVal: 10,
+        interval:10,
+        maxVal:300,
+        minVal: 0
+    },
+
+    {
+        startVal: 50,
+        interval:2,
+        maxVal:100,
+        minVal: 0
+    },
+
+    {
+        startVal: 36,
+        interval:6,
+        maxVal:66,
+        minVal: 26
+    }
+
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Counters data={dataCounters}></Counters>
   );
 }
 
